@@ -92,6 +92,10 @@ public class TelaDeCompra extends javax.swing.JPanel {
         jTextField3 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
 
         jPanel1.setMinimumSize(new java.awt.Dimension(1024, 700));
         jPanel1.setPreferredSize(new java.awt.Dimension(1024, 700));
@@ -621,13 +625,13 @@ public class TelaDeCompra extends javax.swing.JPanel {
 
         jLabel6.setText("NOME: ");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(30, 180, 50, 15);
+        jLabel6.setBounds(30, 280, 50, 15);
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(30, 200, 460, 23);
+        jTextField2.setBounds(30, 300, 460, 23);
 
         jLabel7.setText("RG:");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(30, 240, 24, 15);
+        jLabel7.setBounds(30, 330, 24, 15);
 
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -635,11 +639,11 @@ public class TelaDeCompra extends javax.swing.JPanel {
             }
         });
         jPanel1.add(jTextField3);
-        jTextField3.setBounds(30, 260, 160, 23);
+        jTextField3.setBounds(30, 350, 160, 23);
 
         jLabel8.setText("DATA NASCIMENTO:");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(210, 240, 150, 15);
+        jLabel8.setBounds(210, 330, 150, 15);
 
         jTextField4.setText("dd/mm/aaaa");
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
@@ -648,7 +652,31 @@ public class TelaDeCompra extends javax.swing.JPanel {
             }
         });
         jPanel1.add(jTextField4);
-        jTextField4.setBounds(210, 260, 140, 23);
+        jTextField4.setBounds(210, 350, 140, 23);
+
+        jLabel9.setText("VALOR:");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(30, 190, 51, 15);
+
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField5);
+        jTextField5.setBounds(30, 210, 70, 23);
+
+        jLabel10.setText("POLTRONA:");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(210, 190, 90, 15);
+
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField6);
+        jTextField6.setBounds(210, 210, 80, 23);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -706,6 +734,14 @@ public class TelaDeCompra extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField4ActionPerformed
 
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -761,6 +797,7 @@ public class TelaDeCompra extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -768,10 +805,13 @@ public class TelaDeCompra extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }
