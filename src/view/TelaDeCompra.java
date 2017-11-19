@@ -5,17 +5,27 @@
  */
 package view;
 
+import projeto.DadosDaCompra;
+
 /**
  *
  * @author italo
  */
 public class TelaDeCompra extends javax.swing.JPanel {
+    
+    private String origem;
+    private String destino;
+    private String dataCompra;
+    private String nome;
+    private String RG;
+    private String dataNascimento;
+    private String poltrona;
 
     /**
      * Creates new form TelaDeCompra
      */
     public TelaDeCompra() {
-        initComponents();
+        initComponents();       
     }
 
     /**
@@ -80,22 +90,24 @@ public class TelaDeCompra extends javax.swing.JPanel {
         jButton50 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        destino_jComboBox = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        origem_jComboBox = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        dataCompra_jTextField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        nome_jTextField = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        rg_jTextField = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        dataNascimento_jTextField = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        valor_jTextField = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        poltrona_jTextField = new javax.swing.JTextField();
+        jButton51 = new javax.swing.JButton();
+        jButton52 = new javax.swing.JButton();
 
         jPanel1.setMinimumSize(new java.awt.Dimension(1024, 700));
         jPanel1.setPreferredSize(new java.awt.Dimension(1024, 700));
@@ -584,14 +596,14 @@ public class TelaDeCompra extends javax.swing.JPanel {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(10, 10, 320, 80);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João Pessoa - PB", "São Paulo - SP", "Salvador - BA", "Rio de Janeiro - RJ", "Recife - PE" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        destino_jComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João Pessoa - PB", "São Paulo - SP", "Salvador - BA", "Rio de Janeiro - RJ", "Recife - PE" }));
+        destino_jComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                destino_jComboBoxActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox1);
-        jComboBox1.setBounds(210, 140, 160, 25);
+        jPanel1.add(destino_jComboBox);
+        destino_jComboBox.setBounds(210, 140, 160, 25);
 
         jLabel3.setText("DESTINO:");
         jPanel1.add(jLabel3);
@@ -601,82 +613,101 @@ public class TelaDeCompra extends javax.swing.JPanel {
         jPanel1.add(jLabel4);
         jLabel4.setBounds(30, 120, 70, 15);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João Pessoa - PB", "São Paulo - SP", "Salvador - BA", "Rio de Janeiro - RJ", "Recife - PE" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        origem_jComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João Pessoa - PB", "São Paulo - SP", "Salvador - BA", "Rio de Janeiro - RJ", "Recife - PE" }));
+        origem_jComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                origem_jComboBoxActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox2);
-        jComboBox2.setBounds(30, 140, 160, 25);
+        jPanel1.add(origem_jComboBox);
+        origem_jComboBox.setBounds(30, 140, 160, 25);
 
         jLabel5.setText("DATA:");
         jPanel1.add(jLabel5);
         jLabel5.setBounds(390, 120, 41, 15);
 
-        jTextField1.setText("dd/mm/aaaa");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        dataCompra_jTextField.setText("dd/mm/aaaa");
+        dataCompra_jTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                dataCompra_jTextFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(390, 140, 100, 23);
+        jPanel1.add(dataCompra_jTextField);
+        dataCompra_jTextField.setBounds(390, 140, 100, 23);
 
         jLabel6.setText("NOME: ");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(30, 280, 50, 15);
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(30, 300, 460, 23);
+
+        nome_jTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nome_jTextFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(nome_jTextField);
+        nome_jTextField.setBounds(30, 300, 460, 23);
 
         jLabel7.setText("RG:");
         jPanel1.add(jLabel7);
         jLabel7.setBounds(30, 330, 24, 15);
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        rg_jTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                rg_jTextFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField3);
-        jTextField3.setBounds(30, 350, 160, 23);
+        jPanel1.add(rg_jTextField);
+        rg_jTextField.setBounds(30, 350, 160, 23);
 
         jLabel8.setText("DATA NASCIMENTO:");
         jPanel1.add(jLabel8);
         jLabel8.setBounds(210, 330, 150, 15);
 
-        jTextField4.setText("dd/mm/aaaa");
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        dataNascimento_jTextField.setText("dd/mm/aaaa");
+        dataNascimento_jTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                dataNascimento_jTextFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField4);
-        jTextField4.setBounds(210, 350, 140, 23);
+        jPanel1.add(dataNascimento_jTextField);
+        dataNascimento_jTextField.setBounds(210, 350, 140, 23);
 
         jLabel9.setText("VALOR:");
         jPanel1.add(jLabel9);
         jLabel9.setBounds(30, 190, 51, 15);
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        valor_jTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                valor_jTextFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField5);
-        jTextField5.setBounds(30, 210, 70, 23);
+        jPanel1.add(valor_jTextField);
+        valor_jTextField.setBounds(30, 210, 70, 23);
 
         jLabel10.setText("POLTRONA:");
         jPanel1.add(jLabel10);
         jLabel10.setBounds(210, 190, 90, 15);
 
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        poltrona_jTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                poltrona_jTextFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField6);
-        jTextField6.setBounds(210, 210, 80, 23);
+        jPanel1.add(poltrona_jTextField);
+        poltrona_jTextField.setBounds(210, 210, 80, 23);
+
+        jButton51.setText("Salvar Dados");
+        jButton51.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton51ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton51);
+        jButton51.setBounds(30, 430, 160, 31);
+
+        jButton52.setText("Cancelar");
+        jPanel1.add(jButton52);
+        jButton52.setBounds(230, 430, 98, 31);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -699,20 +730,27 @@ public class TelaDeCompra extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    private void destino_jComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_destino_jComboBoxActionPerformed
+        //Captura a destino       
+        
+        destino = destino_jComboBox.getSelectedItem().toString();
+    }//GEN-LAST:event_destino_jComboBoxActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    private void origem_jComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_origem_jComboBoxActionPerformed
+        //Captura a origem       
+        
+        origem = origem_jComboBox.getSelectedItem().toString();
+        
+        System.out.println("origem: "+ origem);
+    }//GEN-LAST:event_origem_jComboBoxActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    private void dataCompra_jTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataCompra_jTextFieldActionPerformed
+        //Captura a data da compra
+        //dataCompra = dataCompra_jTextField.getText();
+    }//GEN-LAST:event_dataCompra_jTextFieldActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
@@ -726,24 +764,63 @@ public class TelaDeCompra extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton43ActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    private void rg_jTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rg_jTextFieldActionPerformed
+        // Captura o RG        
+        //RG = rg_jTextField.getText().toString();
+    }//GEN-LAST:event_rg_jTextFieldActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    private void dataNascimento_jTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataNascimento_jTextFieldActionPerformed
+        // Captura a data de nascimento
+        //dataNascimento = dataNascimento_jTextField.getText().toString();
+    }//GEN-LAST:event_dataNascimento_jTextFieldActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    private void valor_jTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valor_jTextFieldActionPerformed
+        // Captura o valor da passagem
+        
+        
+    }//GEN-LAST:event_valor_jTextFieldActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    private void poltrona_jTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_poltrona_jTextFieldActionPerformed
+        // Captura o numero da poltrona
+        
+    }//GEN-LAST:event_poltrona_jTextFieldActionPerformed
+
+    private void jButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton51ActionPerformed
+        // Salva os dados contidos nas caixas de dialogo
+        
+        //Captura a data da compra
+        dataCompra = dataCompra_jTextField.getText();        
+        // Captura a Poltrona
+        poltrona = poltrona_jTextField.getText();
+        // Captura o nome        
+        nome = nome_jTextField.getText();
+        // Captura o RG        
+        RG = rg_jTextField.getText();
+        // Captura a data de nascimento
+        dataNascimento = dataNascimento_jTextField.getText();
+        
+        // Um objeto dados e imprime just check!
+        DadosDaCompra dados = new DadosDaCompra(origem, destino, dataCompra, nome, RG, dataNascimento, poltrona);
+        System.out.println("Origem: " + origem);
+        System.out.println("Destino: " + destino);
+        System.out.println("Data: " + dataCompra);
+        System.out.println("Nome: " + nome);
+        System.out.println("RG: " + RG);
+        System.out.println("Nascimento: " + dataNascimento);
+        System.out.println("Poltrona: " + poltrona);
+        
+    }//GEN-LAST:event_jButton51ActionPerformed
+
+    private void nome_jTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nome_jTextFieldActionPerformed
+        // Captura o nome        
+        //nome = nome_jTextField.getText().toString();
+    }//GEN-LAST:event_nome_jTextFieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField dataCompra_jTextField;
+    private javax.swing.JTextField dataNascimento_jTextField;
+    private javax.swing.JComboBox<String> destino_jComboBox;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -790,12 +867,12 @@ public class TelaDeCompra extends javax.swing.JPanel {
     private javax.swing.JButton jButton49;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton50;
+    private javax.swing.JButton jButton51;
+    private javax.swing.JButton jButton52;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -807,11 +884,10 @@ public class TelaDeCompra extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField nome_jTextField;
+    private javax.swing.JComboBox<String> origem_jComboBox;
+    private javax.swing.JTextField poltrona_jTextField;
+    private javax.swing.JTextField rg_jTextField;
+    private javax.swing.JTextField valor_jTextField;
     // End of variables declaration//GEN-END:variables
 }
