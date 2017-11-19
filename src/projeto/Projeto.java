@@ -1,8 +1,7 @@
 
 package projeto;
 
-import view.FramePrincipal;
-import view.JFrameClient;
+import javax.swing.JFrame;
 import view.TelaDeCompra;
 
 /**
@@ -14,9 +13,18 @@ public class Projeto {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) {         
+       
         
-        new TelaDeCompra();
+       TelaDeCompra tela = new TelaDeCompra();
+       
+       JFrame frame = new JFrame("Tela de Compra");
+       
+       frame.setContentPane(tela);
+       frame.setBounds(0, 0, 1024, 700);       
+       frame.setVisible(true);     
+       
+       
     }
     
 }
