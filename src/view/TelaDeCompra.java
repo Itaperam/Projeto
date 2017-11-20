@@ -109,6 +109,7 @@ public class TelaDeCompra extends javax.swing.JPanel {
         jButton51 = new javax.swing.JButton();
         jButton52 = new javax.swing.JButton();
 
+        jPanel1.setMaximumSize(new java.awt.Dimension(1024, 700));
         jPanel1.setMinimumSize(new java.awt.Dimension(1024, 700));
         jPanel1.setPreferredSize(new java.awt.Dimension(1024, 700));
         jPanel1.setLayout(null);
@@ -781,8 +782,7 @@ public class TelaDeCompra extends javax.swing.JPanel {
     }//GEN-LAST:event_valor_jTextFieldActionPerformed
 
     private void poltrona_jTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_poltrona_jTextFieldActionPerformed
-        // Captura o numero da poltrona
-        
+        // Captura o numero da poltrona        
     }//GEN-LAST:event_poltrona_jTextFieldActionPerformed
 
     private void jButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton51ActionPerformed
@@ -799,8 +799,8 @@ public class TelaDeCompra extends javax.swing.JPanel {
         // Captura a data de nascimento
         dataNascimento = dataNascimento_jTextField.getText();
         
-        // Um objeto dados e imprime just check!
-        DadosDaCompra dados = new DadosDaCompra(origem, destino, dataCompra, nome, RG, dataNascimento, poltrona);
+        // Um objeto dados e imprime just checking!
+        // DadosDaCompra dados = new DadosDaCompra(origem, destino, dataCompra, nome, RG, dataNascimento, poltrona);
         System.out.println("Origem: " + origem);
         System.out.println("Destino: " + destino);
         System.out.println("Data: " + dataCompra);

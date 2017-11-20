@@ -21,7 +21,8 @@ public class Projeto {
        JFrame frame = new JFrame("Tela de Compra");
        
        frame.setContentPane(tela);
-       frame.setBounds(0, 0, 1024, 700);       
+       frame.setBounds(0, 0, 1024, 700); 
+       frame.setResizable(false);
        frame.setVisible(true);     
        
        
