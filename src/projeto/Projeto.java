@@ -8,7 +8,7 @@ import view.TelaDeCompra;
  *
  * @author italo
  */
-public class Projeto {
+public class Projeto  {
 
     /**
      * @param args the command line arguments
