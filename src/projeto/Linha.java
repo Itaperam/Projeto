@@ -29,15 +29,6 @@ public class Linha {
 
     public void setVetPoltrona(int[] vetPoltrona) {
         this.vetPoltrona = vetPoltrona;
-    }
-    
-    
-
-  
-    
-    
-    
-    
-    
+    } 
     
 }
